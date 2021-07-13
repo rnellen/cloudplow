@@ -724,13 +724,13 @@ def do_plex_monitor():
     log.info("Finished monitoring Plex stream(s)!")
     plex_monitor_thread = None
 
- def do_postscript(script):
-    if os.path.isfile(script)==False:
+ def do_postscript(post_script):
+    if os.path.isfile(post_script)==False:
         log.error("Script file does not exist")
     else:
-        log.info("Script File: %s is running",script)
+        log.info("Script File: %s is running",post_script)
         try:
-            subprocess.call(script)
+            subprocess.call(post_script)
         except:
             log.error("Please Make sure your script has a shell, and is properly formated" )
 
