@@ -724,7 +724,7 @@ def do_plex_monitor():
     log.info("Finished monitoring Plex stream(s)!")
     plex_monitor_thread = None
 
- def do_postscript(post_script):
+def do_postscript(post_script):
     if os.path.isfile(post_script)==False:
         log.error("Script file does not exist")
     else:
